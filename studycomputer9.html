@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字闪烁效果</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+            padding-top: 249px;
+            margin: 0 auto;
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .main div{
+            display: inline-block;
+            color: transparent;
+        }
+        span{
+            font-size: 120px;
+            animation: twinkle 4.6s linear infinite;
+            
+        }
+        .main div:nth-child(1) span:nth-child(1){
+            animation-delay: 0s;
+        }
+        .main div:nth-child(2) span:nth-child(1){
+            animation-delay: 0.4s;
+        }
+        .main div:nth-child(2) span:nth-child(2){
+            animation-delay: 0.8s;
+        }
+        .main div:nth-child(2) span:nth-child(3){
+            animation-delay: 1.2s;
+        }
+        .main div:nth-child(2) span:nth-child(4){
+            animation-delay: 1.6s;
+        }
+        .main div:nth-child(3) span:nth-child(1){
+            animation-delay: 2.0s;
+        }
+        .main div:nth-child(3) span:nth-child(2){
+            animation-delay: 2.4s;
+        }
+        .main div:nth-child(3) span:nth-child(3){
+            animation-delay: 2.8s;
+        }
+        .main div:nth-child(4) span:nth-child(1){
+            animation-delay: 3.2s;
+        }
+        .main div:nth-child(4) span:nth-child(2){
+            animation-delay: 3.6s;
+        }
+        .main div:nth-child(4) span:nth-child(3){
+            animation-delay: 4s;
+        }
+        .main div:nth-child(4) span:nth-child(4){
+            animation-delay: 4.4s;
+        }
+        @keyframes twinkle{
+            0%{
+                color: transparent;
+            } 
+            100%{
+                color: aliceblue;
+                text-shadow: 0 0 4px skyblue,
+                                0 0 10px skyblue,
+                                0 0 20px skyblue,
+                                0 0 30px skyblue,
+                                0 0 40px skyblue,
+                                0 0 50px skyblue,
+                                0 0 60px skyblue,
+                                0 0 70px skyblue,
+                                0 0 80px skyblue,
+                                0 0 90px skyblue,
+                                0 0 100px skyblue,
+                                0 0 110px skyblue,
+                                0 0 120px skyblue,
+                                0 0 130px skyblue;
+                /* 文字阴影叠加 */
+                 text-shadow: 0 0 4px red,
+                                0 0 10px orange,
+                                0 0 20px yellow,
+                                0 0 30px green,
+                                0 0 40px blue,
+                                0 0 50px skyblue,
+                                0 0 60px blueviolet; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <span>I</span></div>
+        <div>
+            <span>l</span>
+            <span>o</span>
+            <span>v</span>
+            <span>e</span></div>
+        <div>
+            <span>y</span>
+            <span>o</span>
+            <span>u</span></div>
+        <div>
+            <span>s</span>
+            <span>o</span>
+            <span>mu</span>
+            <span>ch</span></div>
+    </div>
+</body>
+</html>
